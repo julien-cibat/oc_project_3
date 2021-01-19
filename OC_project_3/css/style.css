@@ -1,0 +1,453 @@
+/*
+style.css
+---------
+OC Project 3
+Par Julien Cibat
+*/
+
+/* HEADER */
+header
+{
+	display: flex;
+	flex-direction: row;
+	float: center;
+	background-color: #FFFFFF;
+	margin: auto;
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	top: 0px;	
+	left: 0px;	
+	border-bottom: 1px solid #000000;
+	box-shadow: 0px 1px 6px #000000;
+}
+
+#logo
+{
+	margin-left: 50px;
+	margin-top: 10px; 
+}
+
+#menu
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	font-size: 20px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-style: bold;
+	font-weight: bold;
+	color: #000000;
+	margin-left: 1200px;
+	padding: 25px 0px;
+}
+
+nav
+{
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	color: #000000;
+	text-align: center;
+}
+
+.element1, .element2, .element3
+{
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;	
+	position: right;
+	text-align: center;
+	justify-content: center;
+	margin: 20px 10px;
+	padding: 10px 10px;
+	background-color: #000000;
+	width: 180px;
+	border-radius: 5px;
+}
+
+.element4
+{
+	color: #000000;
+	font-style: normal;
+	font-weight: bold;	
+	position: right;
+	text-align: center;
+	justify-content: center;
+	margin: 20px 10px;
+	padding: 10px 10px;
+	width: 180px;
+	border-radius: 5px;
+	border: 2px solid #ff7e4a;
+}
+
+.element1:hover, .element2:hover, .element3:hover
+{
+	color: #0A3334;
+	background-color: #FFFFFF;
+	border: 2px solid #0A3334;
+}
+
+.element4:hover
+{
+	color: #FFFFFF;
+	background-color: #ff7e4a;
+}
+
+/* Eléments principaux de la page */
+
+body
+{
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	background-color: #FFFFFF;
+}
+
+/* Listes */
+ul, ol
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	list-style-type: square;
+	color: #272A38;	
+	font-size: 15px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;	
+	width: 55%;
+	margin: 30px 20%;
+	padding: 10px 0px;
+}
+
+li
+{
+	width: 80%;
+	padding: 10px;
+}
+
+/* Eléments de contenu */
+h1
+{
+	color: #000000;
+	font-size: 30px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 120px;
+	margin-left: 25%;
+}
+
+h2
+{
+	color: #000000;
+	font-size: 30px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-weight: normal;
+	text-align: left;
+	margin: 20px auto;
+	width: 50%;
+}
+
+p
+{
+	color: #272A38;
+	font-size: 15px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	word-spacing: 2px;
+	line-height: 20px;
+	text-align: justify;
+	width: 50%;
+	margin: 10px auto;
+	font
+}
+
+.listtitle
+{
+	text-decoration: underline;
+	word-spacing: 1px;
+}
+
+figure
+{
+	text-align: center;
+	margin: auto;
+}
+
+figcaption
+{	
+	font-size: 15px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-style: italic;
+	font-weight: small;
+	color: #272A38;
+	text-align: center;
+}
+
+/* Acteurs */
+.acteurs
+{
+	padding-top: 20px;
+}
+
+.acteurs_list
+{
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: 2px solid #333333;
+    background-color: #333333;
+}
+
+.acteur_snapshot
+{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+    width: 98%;
+    height: 200px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.acteur_snapshot p
+{
+	margin: 0px;
+}
+
+.acteur_text
+{
+    display: flex;
+    float: right;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	margin: auto;
+}
+
+#logo_acteur
+{
+	margin-top: 10px;
+	width: 300px; 
+}
+
+/* Commentaires */
+.commentaires
+{
+    padding-top: 20px;
+}
+
+.commentaires_menu
+{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+    width: 98%;
+    height: 200px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.commentaires_list
+{
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: 2px solid #333333;
+    background-color: #333333;
+}
+
+.commentaires_snapshot
+{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+    width: 98%;
+    height: 200px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.commentaires_snapshot p
+{
+	margin: 0px;
+}
+
+/* Formulaires */
+form
+{
+	border: 2px solid #0A3334;
+	background-color: rgba(10, 51, 52, 0.8);
+	border-radius: 5px;
+	width: 50%;
+	margin-left: 15%;
+	margin-bottom: 100px;
+	text-align: left;
+	padding: 20px 0px;
+}
+
+label, form p, form legend
+{
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: normal;
+}
+
+form legend
+{
+	font-weight: bold;
+}
+
+input
+{
+	color: #0A3334;
+	font-weight: bold;
+	padding: 2px 5px;
+	height: 20px;
+	text-align: left;
+}
+
+textarea
+{
+	width: 400px;
+	height: 200px;
+	padding: 10px 10px;
+	margin-top: 10px;
+}
+
+fieldset
+{
+	width: 80%;
+	margin: auto;
+	border: 2px solid #FFFFFF;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+input[type*="submit"]
+{
+	color: #0A3334;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100px;
+	height: 40px;
+	background-color: #FFFFFF;
+	text-align: center;
+	border: 0px;
+	border-radius: 5px;
+	box-shadow: 3px 3px 6px #0A3334;
+}
+
+input[type*="submit"]:hover
+{
+	color: blue;
+	box-shadow: 3px 3px 6px blue;
+}
+
+/* Date de publication */
+.published
+{
+	font-style: italic;
+}
+
+/* Footer */
+footer
+{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	background-color: #333333;
+	width: 100%;
+	height: 100px;
+	position: relative;
+	left: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+
+#logofooter
+{
+	text-align: left;
+	padding: 25px 25px;
+}
+
+.signature
+{
+	font-size: 18px;
+	color: #FFFFFF;
+	font-style: normal;	
+	position: center;
+	margin: auto;
+	padding: 30px 30px;
+}
+
+.footerCTA 
+{		
+	font-size: 15px;
+	color: #333333;
+	font-style: normal;
+	font-weight: bold;	
+	position: right;
+	text-align: center;
+	justify-content: center;
+	margin: 25px 30px;
+	padding: 10px 10px;
+	background-color: #FFFFFF;
+	width: 140px;
+	height: 20px;
+	border-radius: 5px;
+}
+
+.footerCTA:hover
+{
+	color: #FFFFFF;
+	background-color: #000000;
+}
+
+/* Liens */
+a
+{
+	color: #0A3334;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #1D85E9;
+}
+
+/* Buttons */
+
+button
+{
+	color: #ff7e4a;
+	font-style: normal;
+	font-weight: bold;
+	padding: 10px 10px;
+	width: 100px;
+	height: 40px;
+	border-radius: 5px;
+	border: 2px solid #ff7e4a;
+	background-color: #FFFFFF;
+}
+
+button:hover
+{
+	color: #FFFFFF;
+	background-color: #ff7e4a;
+}
