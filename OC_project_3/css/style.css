@@ -96,11 +96,40 @@ nav
 }
 
 /* Eléments principaux de la page */
-
 body
 {
 	font-family: Roboto, Montserrat, Arial, sans-serif;
 	background-color: #FFFFFF;
+}
+
+.main
+{
+	margin: 120px auto 30px auto;
+	width: 1200px;
+}
+
+.acteurs
+{
+	margin: 30px auto;
+	width: 1200px;
+}
+
+.commentaires
+{
+	margin: 20px auto;
+	width: 1200px;
+	border-radius: 10px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+}
+
+.comment_section
+{
+	margin: 30px auto;
+	width: 1200px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 /* Listes */
@@ -135,9 +164,7 @@ h1
 	font-family: Roboto, Montserrat, Arial, sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	text-align: left;
-	margin-top: 120px;
-	margin-left: 25%;
+	text-align: left;	
 }
 
 h2
@@ -146,9 +173,7 @@ h2
 	font-size: 30px;
 	font-family: Roboto, Montserrat, Arial, sans-serif;
 	font-weight: normal;
-	text-align: left;
-	margin: 20px auto;
-	width: 50%;
+	text-align: left;	
 }
 
 p
@@ -161,7 +186,6 @@ p
 	word-spacing: 2px;
 	line-height: 20px;
 	text-align: justify;
-	width: 50%;
 	margin: 10px auto;
 	font
 }
@@ -175,7 +199,7 @@ p
 figure
 {
 	text-align: center;
-	margin: auto;
+	margin: 30px auto 10px auto;
 }
 
 figcaption
@@ -189,14 +213,8 @@ figcaption
 }
 
 /* Acteurs */
-.acteurs
-{
-	padding-top: 20px;
-}
-
 .acteurs_list
 {
-    width: 50%;
     margin: 30px auto;
     border-radius: 10px;
     border: 2px solid #333333;
@@ -208,18 +226,31 @@ figcaption
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: left;
+	align-items: center;
     width: 98%;
-    height: 200px;
+    height: 180px;
     margin: 10px auto;
     border-radius: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #333333;
     background-color: #FFFFFF;
 }
 
-.acteur_snapshot p
+.acteur_snapshot img
 {
-	margin: 0px;
+	margin: 0px 20px;
+}
+
+.acteur_snapshot p, h3
+{
+	margin: 0px 10px;
+	width: 90%;
+}
+
+.acteur_snapshot button
+{
+	margin-right: 20px;
+	width: 180px;
 }
 
 .acteur_text
@@ -239,30 +270,33 @@ figcaption
 	width: 300px; 
 }
 
-/* Commentaires */
-.commentaires
+#logo_acteur_page
 {
-    padding-top: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	margin: 30px auto;
+	width: 400px;
 }
 
+/* Commentaires */
 .commentaires_menu
 {
     display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	justify-content: center;
-    width: 98%;
-    height: 200px;
-    margin: 10px auto;
-    border-radius: 10px;
-    border: 2px solid #000000;
-    background-color: #FFFFFF;
+	justify-content: space-between;
+	align-items: center;
+    width: 90%;
+    height: 100px;
+    margin: auto;    
 }
 
 .commentaires_list
 {
-    width: 50%;
-    margin: 30px auto;
+    width: 90%;
+    margin: 20px auto;
     border-radius: 10px;
     border: 2px solid #333333;
     background-color: #333333;
@@ -271,11 +305,10 @@ figcaption
 .commentaires_snapshot
 {
     display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
     width: 98%;
-    height: 200px;
+    height: 100px;
     margin: 10px auto;
     border-radius: 10px;
     border: 2px solid #000000;
@@ -284,20 +317,27 @@ figcaption
 
 .commentaires_snapshot p
 {
-	margin: 0px;
+	margin: 5px 10px; 
+	padding: 0px;
+}
+
+.comment_notice
+{
+	width: 50%;
+	margin-left: 100px;
+	text-align: center;	
+}
+
+.comment_notice p
+{
+	text-align: center;	
 }
 
 /* Formulaires */
 form
 {
-	border: 2px solid #0A3334;
-	background-color: rgba(10, 51, 52, 0.8);
 	border-radius: 5px;
-	width: 50%;
-	margin-left: 15%;
-	margin-bottom: 100px;
-	text-align: left;
-	padding: 20px 0px;
+	text-align: center;
 }
 
 label, form p, form legend
@@ -323,10 +363,11 @@ input
 
 textarea
 {
+	border: 2px solid #000000;
 	width: 400px;
 	height: 200px;
 	padding: 10px 10px;
-	margin-top: 10px;
+	margin: auto;
 }
 
 fieldset
@@ -341,22 +382,23 @@ fieldset
 
 input[type*="submit"]
 {
-	color: #0A3334;
+	color: #FFFFFF;
 	font-size: 20px;
 	font-weight: bold;
 	width: 100px;
 	height: 40px;
-	background-color: #FFFFFF;
+	background-color: #000000;
 	text-align: center;
 	border: 0px;
 	border-radius: 5px;
-	box-shadow: 3px 3px 6px #0A3334;
+	box-shadow: 3px 3px 6px #000000;
 }
 
 input[type*="submit"]:hover
 {
-	color: blue;
-	box-shadow: 3px 3px 6px blue;
+	color: #FFFFFF;
+	box-shadow: 3px 3px 6px #0A3334;
+	background-color: #0A3334;
 }
 
 /* Date de publication */
@@ -380,20 +422,10 @@ footer
 	margin: auto;
 }
 
-#logofooter
+.footerNav
 {
-	text-align: left;
-	padding: 25px 25px;
-}
-
-.signature
-{
-	font-size: 18px;
-	color: #FFFFFF;
-	font-style: normal;	
-	position: center;
 	margin: auto;
-	padding: 30px 30px;
+	padding: 25px 0px;
 }
 
 .footerCTA 
@@ -435,19 +467,30 @@ a:hover
 
 button
 {
-	color: #ff7e4a;
+	font-size: 15px;
+	color: #FFFFFF;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: bold;	
+	position: right;
+	text-align: center;
+	justify-content: center;
+	margin: 25px 30px;
 	padding: 10px 10px;
-	width: 100px;
-	height: 40px;
+	background-color: #333333;
+	width: 140px;
+	height: 50px;
 	border-radius: 5px;
-	border: 2px solid #ff7e4a;
-	background-color: #FFFFFF;
+}
+
+button a
+{
+	color: #FFFFFF;
+	font-style: normal;
+	font-weight: bold;		
 }
 
 button:hover
 {
 	color: #FFFFFF;
-	background-color: #ff7e4a;
+	background-color: #000000;
 }

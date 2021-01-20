@@ -17,7 +17,7 @@
 				<div><a class="element1" href="index.php">Accueil</a></div>
 				<div><a class="element2" href="signup.php">Inscription</a></div>
 				<div><a class="element3" href="login.php">Connexion</a></div>
-				<div><a class="element4" href="profile.php">Paramètres</a></div>								
+				<div><a class="element4" href="settings.php">Paramètres</a></div>								
 			</nav>
 
 		</header>
