@@ -1,15 +1,18 @@
-<?php
-session_start();
+<?php // Connexion Database    
+try {
+    $bdd = new PDO('mysql:host=localhost;dbname=project_3;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+catch(Exception $e) {
+    die('Erreur : '.$e->getMessage());
+}
 
-$_SESSION['id'] = 'usersId';
-$_SESSION['Nom'] = 'usersNom';
-$_SESSION['Prenom'] = 'usersPrenom';
-$_SESSION['Username'] = 'usersUsername';
+// Header
+include_once 'header.php';
 
-?>
-
-<?php // Header
-    include_once 'header.php';
+ // Vérification autorisation accès
+if(!$_SESSION['username']) {
+    header("location: login.php");
+}
 ?>
 
 <!-- Contenu de la page -->
@@ -33,18 +36,8 @@ $_SESSION['Username'] = 'usersUsername';
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque sit amet porttitor eget dolor morbi. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. Auctor neque vitae tempus quam. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur. Massa id neque aliquam vestibulum morbi blandit. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Tristique senectus et netus et malesuada. Sed elementum tempus egestas sed sed risus. Eget arcu dictum varius duis at. Nibh venenatis cras sed felis eget. Id velit ut tortor pretium viverra. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Vitae elementum curabitur vitae nunc sed velit dignissim. Placerat vestibulum lectus mauris ultrices eros in.</p>
 
         <div class="acteurs_list">
-            <?php // Connexion DataBase
+            <?php // Affichage liste des acteurs
 
-            try
-            {
-                $bdd = new PDO('mysql:host=localhost;dbname=project_3;charset=utf8', 'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-            }
-            catch(Exception $e)
-            {
-                die('Erreur : '.$e->getMessage());
-            }
-
-            // Affichage liste des acteurs
             $req = $bdd->query('SELECT * FROM acteurs ORDER BY id_acteur');
             
             while ($donnees = $req->fetch()) 
@@ -62,7 +55,7 @@ $_SESSION['Username'] = 'usersUsername';
                     <p><?php echo substr(htmlspecialchars($donnees['description']), 0, 120) . '...'; ?></p>
                 </div>    
                 
-                <button><a href="partenaire.php?page=<?php echo $donnees['id_acteur']; +?>">Lire la suite</a></button>
+                <button><a href="partenaire.php?page=<?php echo $donnees['id_acteur']; ?>">Lire la suite</a></button>
                 
             </div>
 
@@ -76,5 +69,5 @@ $_SESSION['Username'] = 'usersUsername';
     </section>    	 
 
 <?php // Footer
-    include_once 'footer.php';
+include_once 'footer.php';
 ?>

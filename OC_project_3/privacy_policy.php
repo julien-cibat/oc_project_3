@@ -32,5 +32,5 @@ session_start();
     </section>   
 
 <?php // Footer
-    include_once 'footer.php';
+include_once 'footer.php';
 ?>

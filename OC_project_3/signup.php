@@ -1,51 +1,33 @@
-<?php
-	include_once 'header.php';
+<?php 
+session_start();
+
+include_once 'header.php';
 ?>
 
-	<section class="signup-form">
-		<h2>Inscription</h2>
-		<div class="signup-form-form">
-			<form action="includes/signup.inc.php" method="post">
-				<input type="text" name="name" placeholder="Name...">
-				<input type="email" name="email" placeholder="Email...">
-				<input type="text" name="username" placeholder="Username...">
-				<input type="password" name="password" placeholder="Password...">
-				<input type="password" name="passwordRepeat" placeholder="Repeat password...">
-				<button type="submit" name="submit">Valider</button>
-			</form>
-		</div>
-	</section>
+	<div class="login_signup_interface">
+		<section class="main">
+			<h2>Inscription</h2>
+			<div>
+				<form class="signup_form" action="includes/signup_post.php" method="post">					
+					<input type="text" name="nom" placeholder="Nom..." />					
+					<input type="text" name="prenom" placeholder="Prenom..." />
+					<input type="text" name="username" placeholder="Identifiant..." />					
+					<input type="password" name="password" placeholder="Mot de passe..." />
+					<input type="text" name="question" placeholder="Question secrète ?" />					
+					<input type="text" name="reponse" placeholder="Réponse à la question secrète..." />					
+					<button type="submit" name="submit">Valider</button>					
+				</form>
+			</div>
+		</section>
 
-	<?php
-	if (isset($_GET['error'])) 
-	{
-		if ($_GET['error'] == "emptyinput")
-		{
-			echo '<p>Remplissez tous les champs</p>';
-		}
-		else if($_GET['error'] == "invalidusername")
-		{
-			echo '<p>Choisissez un bon username</p>';
-		}
-		else if($_GET['error'] == "passwordsdontmatch")
-		{
-			echo '<p>Les mots de passe ne sont pas identiques</p>';
-		}
-		else if($_GET['error'] == "usernametaken") // A changer stmt
-		{
-			echo '<p>xxxx</p>';
-		}
-		else if($_GET['error'] == "usernametaken")
-		{
-			echo '<p>xxxx</p>';
-		}
-		else if($_GET['error'] == "none")
-		{
-			echo '<p>xxxx</p>';
-		}
-	}
-	?>
+		<section class="login-signup_options">			
+			
+			<h4>Vous avez déjà un compte GBAF ?</h4>
+			<a href="login.php">Cliquez sur ce lien pour vous connecter au portail</a>
+			
+		</section>
+	</div>
 
 <?php
-	include_once 'footer.php';
+include_once 'footer.php';
 ?>

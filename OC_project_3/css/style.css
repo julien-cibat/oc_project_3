@@ -39,7 +39,7 @@ header
 	font-style: bold;
 	font-weight: bold;
 	color: #000000;
-	margin-left: 1200px;
+	margin-left: 60%;
 	padding: 25px 0px;
 }
 
@@ -69,7 +69,7 @@ nav
 
 .element4
 {
-	color: #000000;
+	color: #ff7e4a;
 	font-style: normal;
 	font-weight: bold;	
 	position: right;
@@ -176,6 +176,14 @@ h2
 	text-align: left;	
 }
 
+h3
+{
+	color: #000000;
+	font-size: 20px;
+	font-family: Roboto, Montserrat, Arial, sans-serif;
+	font-weight: normal;	
+}
+
 p
 {
 	color: #272A38;
@@ -186,8 +194,7 @@ p
 	word-spacing: 2px;
 	line-height: 20px;
 	text-align: justify;
-	margin: 10px auto;
-	font
+	margin: 10px auto;	
 }
 
 .listtitle
@@ -342,7 +349,7 @@ form
 
 label, form p, form legend
 {
-	color: #FFFFFF;
+	color: #000000;
 	font-size: 15px;
 	font-weight: normal;
 }
@@ -399,6 +406,41 @@ input[type*="submit"]:hover
 	color: #FFFFFF;
 	box-shadow: 3px 3px 6px #0A3334;
 	background-color: #0A3334;
+}
+
+.CTAsettings
+{
+	margin: 40px 20px;
+}
+
+.login_interface{
+	margin-bottom: 5%;
+}
+
+.signup_interface{
+	margin-bottom: 5%;
+}
+
+.signup_form {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	text-align: center;
+	width: 40%;
+	padding: 10px 0px;
+}
+
+.signup_form input {
+	margin: 10px 0px;
+}
+
+.login-signup_options
+{
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 5%;
 }
 
 /* Date de publication */
@@ -493,4 +535,11 @@ button:hover
 {
 	color: #FFFFFF;
 	background-color: #000000;
+}
+
+/* Alerts */
+.alert
+{
+	font-size: 20px;
+	color: #ff7e4a;
 }
