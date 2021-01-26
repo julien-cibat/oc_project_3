@@ -144,16 +144,15 @@ ul, ol
 	font-family: Roboto, Montserrat, Arial, sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	text-align: left;	
-	width: 55%;
-	margin: 30px 20%;
+	text-align: left;
+	margin: 10px 20px;
 	padding: 10px 0px;
 }
 
 li
 {
 	width: 80%;
-	padding: 10px;
+	padding: 5px;
 }
 
 /* Eléments de contenu */

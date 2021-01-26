@@ -18,23 +18,23 @@ if(!$_SESSION['username']) {
 }
 
 // Vérification si commentaire user déjà existant
-$req1 = $bdd->prepare('SELECT post AS comment FROM posts WHERE id_user = :id_user & id_acteur = :id_acteur');
+$userid = $_SESSION['id'];
+$acteurid = $_GET['page'];
+
+$req1 = $bdd->prepare('SELECT * FROM posts WHERE id_user = :id_user AND id_acteur = :id_acteur');
 $req1->execute(array(
-    ':id_user' => $_SESSION['id'],
-    ':id_acteur' => $_GET['page'],
+    ':id_user' => $userid,
+    ':id_acteur' => $acteurid,
     ));
 
-$donnees_comments = $req1->fetch();
-$user_comment = $donnees_comments['comment'];
+$donnees_row = $req1->fetch();      
 
-if (!empty($user_comment)) {
-    $userid = $_SESSION['id'];
-    $acteur = $_GET['page'];    
-    header("location: partenaire.php?error=alreadycommented&userid=$userid&acteur=$acteur");
-}
+// Fin de requête et fin du script
+$req1->closeCursor(); 
 
-// Fin de requête
-$req1->closeCursor();            
+if ($donnees_row) {         
+    header("location: partenaire.php?page=$acteurid&error=alreadycommented");
+}         
 ?> 
 
 <!-- Contenu de la page -->
@@ -57,7 +57,7 @@ $req1->closeCursor();
     ?>
 
         <h1>Postez votre commentaire à propos de <em><?php echo $acteur; ?></em></h1>
-    	<p>En tant que : <strong><?php echo $_SESSION['Username']; ?></strong></p>
+    	<p>En tant que : <strong><?php echo $_SESSION['username']; ?></strong></p>
     	<p>Date : <strong><?php echo $today; ?></strong></p>
         
     <?php
