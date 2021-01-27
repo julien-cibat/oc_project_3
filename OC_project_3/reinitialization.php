@@ -17,7 +17,9 @@ $donnees = $req->fetch();
 
 ?>
 
+<section class="bloc_page">
 	<div class="login_signin_interface">
+
 		<section class="main">
 			<h1>Nouveau mot de passe</h1>
 			<p>Merci de définir votre nouveau mot de passe pour <strong><?php echo $donnees['usersUsername']; ?></strong></p>
@@ -31,7 +33,8 @@ $donnees = $req->fetch();
 			</div>		
 		</section>	
 
-	</div>	
+	</div>
+</section>	
 
 <?php // Footer
 include_once 'footer.php';

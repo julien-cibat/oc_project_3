@@ -21,7 +21,8 @@ $question = $donnees['usersQuestion'];
 // Fin de requête
 $req->closeCursor();
 ?> 
-	
+
+<section class="bloc_page">	
 	<section class="main">
 		<h1>Récupération de mot de passe</h1>
 		<p>Afin de réinitialiser votre mot de passe, merci de confirmer votre identité en répondant à la question suivante :</p>
@@ -35,7 +36,8 @@ $req->closeCursor();
 				<button type="submit" name="submit">Valider</button>
 			</form>
 		</div>		
-	</section>	
+	</section>
+</section>	
 
 <?php // Footer
 include_once 'footer.php';

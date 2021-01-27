@@ -38,6 +38,7 @@ if ($donnees_row) {
 ?> 
 
 <!-- Contenu de la page -->
+<section class="bloc_page">
 	<section class="main">
     <!-- Commentaire page init -->
 
@@ -68,28 +69,33 @@ if ($donnees_row) {
     $req->closeCursor();    
     ?>
 
-</section>
+    </section>
 
-<section class="comment_section">
-		<!-- Espace Commentaire -->  
+    <section class="comment_section">
+    		<!-- Espace Commentaire -->  
 
-    <div class="comment_area">
-	    <form method="post" action="includes/commentaire_post.php">
-	    	<?php
-		    	echo '<input type="hidden" name="id_user" value="' . $id_user . '" />'."\n";       
-		        echo '<input type="hidden" name="id_acteur" value="' . $id_acteur . '" />'."\n";
-	    	?> 	
-			<p><textarea name="post" placeholder="Ecrivez votre commentaire ici..."></textarea></p>
-	        <p><input type="submit" name="submit" value="Envoyer"/></p>  		
-		</form>
-	</div>
+        <div class="comment_area">
+    	    <form method="post" action="includes/commentaire_post.php">
+    	    	<?php
+    		    	echo '<input type="hidden" name="id_user" value="' . $id_user . '" />'."\n";       
+    		        echo '<input type="hidden" name="id_acteur" value="' . $id_acteur . '" />'."\n";
+    	    	?> 	
+    			<p><textarea name="post" placeholder="Ecrivez votre commentaire ici..."></textarea></p>
+    	        <p><input type="submit" name="submit" value="Envoyer"/></p>  		
+    		</form>
+    	</div>
 
-	<div class="comment_notice">
-        <img src="img/gbaf_logo.jpg" alt="Logo GBAF">                
-        <p>Votre avis nous est précieux pour aider l'ensemble de la communauté GBAF<br/> 
-        à mieux référencer les offres de nos partenaires.</p>
-        <p>Merci pour votre contribution.</p>           
-    </div>
+    	<div class="comment_notice">
+            <img src="img/gbaf_logo.jpg" alt="Logo GBAF">                
+            <p>Votre avis nous est précieux pour aider l'ensemble de la communauté GBAF<br/> 
+            à mieux référencer les offres de nos partenaires.</p>
+            <p>Merci pour votre contribution.</p>           
+        </div>
+    </section>
+
+    <section class="main">
+        <p><em>Avant de valider votre commentaire, veuillez à bien vous relire. Tout commentaire publié sur la plateforme ne peut plus être modifié ni supprimé.</em></p> 
+    </section>
 </section>
 
 <?php // Footer

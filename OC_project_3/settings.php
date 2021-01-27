@@ -16,6 +16,7 @@ if(!$_SESSION['username']) {
 ?>
 
 <!-- Contenu de la page -->
+<section class="bloc_page">
    	<section class="main">
         <!-- Informations personnelles -->    
         <h1>Paramètres utilisateur</h1>
@@ -45,15 +46,16 @@ if(!$_SESSION['username']) {
         ?>
 
         <!-- Espace Commentaire -->  
-        <div>		    
+        <div class="settings_list">		    
 			<form method="post" action="includes/settings_post.php">
 				<p><label>Nom</label> <input type="text" name="nom" value="<?php echo $nom; ?>" /></p>
 		        <p><label>Prenom</label> <input type="text" name="prenom" value="<?php echo $prenom; ?>" /></p>
 		        <p><label>Pseudo</label> <input type="text" name="username" value="<?php echo $username; ?>" /></p><br/>
-		        <p><label>Mot de passe : </label> <a href="reinitialization.php?user=<?php echo $_SESSION['id']; ?>">Renouveler le mot de passe</a></p><br/>
+		        <p><label>Mot de passe : </label> <strong><a href="reinitialization.php?user=<?php echo $_SESSION['id']; ?>">Renouveler le mot de passe</a></strong></p><br/>
                 <p><label>Question secrète</label> <input type="text" name="question" value="<?php echo $question; ?>" /></p>
                 <p><label>Réponse</label> <input type="password" name="reponse" value="<?php echo $reponse; ?>" /></p><br/>
 		        <p><label>Inscrit depuis le : </label><?php echo ($date_inscription); ?></p>
+                <p><strong><a href="includes/disconnect.php">Se déconnecter</a></strong></p>
                 <p><input type="hidden" name="userId" value="<?php echo $userId; ?>" /></p>
                 <p><input type="hidden" name="password_old" value="<?php echo $password; ?>" /></p>   
 		        <div>
@@ -63,6 +65,7 @@ if(!$_SESSION['username']) {
 			</form>                       
 		</div>		
 	</section>
+</section>
 
 <?php // Footer
 include_once 'footer.php';

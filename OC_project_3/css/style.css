@@ -24,7 +24,7 @@ header
 
 #logo
 {
-	margin-left: 50px;
+	margin-left: 150px;
 	margin-top: 10px; 
 }
 
@@ -363,7 +363,7 @@ input
 	color: #0A3334;
 	font-weight: bold;
 	padding: 2px 5px;
-	height: 20px;
+	height: 30px;
 	text-align: left;
 }
 
@@ -407,9 +407,54 @@ input[type*="submit"]:hover
 	background-color: #0A3334;
 }
 
-.CTAsettings
+.CTA_comment
 {
+	color: #333333; 
+}
+
+.CTA_like
+{	
 	margin: 40px 20px;
+	background-color: #FFFFFF;
+}
+
+.CTA_like:hover
+{		
+	background-color: #065FD4;
+}
+
+.CTA_dislike
+{
+
+	margin: 40px 20px;
+	background-color: #FFFFFF;
+}
+
+.CTA_dislike:hover
+{
+	background-color: #EF4056;
+}
+
+.CTA_counter
+{
+	font-size: 14px;
+	color: #333333;
+	background-color: #FFFFFF;
+	border: none;
+}
+
+.CTA_counter:hover
+{
+	color: #333333;
+	background-color: #FFFFFF;
+	border: none;
+}
+
+.CTA_counter:active
+{
+	color: #333333;
+	background-color: #FFFFFF;
+	border: none;
 }
 
 .login_interface{
@@ -541,4 +586,183 @@ button:hover
 {
 	font-size: 20px;
 	color: #ff7e4a;
+}
+
+/* Responsive */
+@media all and (max-width: 1024px)
+{
+	.bloc-page
+	{
+		width: auto;
+	}
+
+	.main
+	{
+		width: auto;
+	}
+
+	.acteurs
+	{
+		width: auto;
+	}
+
+	.acteurs_list
+	{
+		width: auto;
+	}
+
+	.acteur_snapshot
+	{
+		width: auto;
+	}
+
+	.acteur_snapshot
+	{
+	    display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+	    width: 98%;
+	    height: 400px;
+	    margin: 10px auto;
+	    border-radius: 10px;
+	    border: 2px solid #333333;
+	    background-color: #FFFFFF;
+	}
+
+	.acteur_snapshot img
+	{
+		margin: 20px 20px;
+		max-height: 100px;
+		max-width: 300px;
+	}
+
+	.acteur_snapshot p, h3
+	{
+		margin: 10px 10px;
+		width: 90%;
+	}
+
+	.acteur_snapshot button
+	{
+		margin: 20px;
+		width: 180px;
+	}	
+
+	.commentaires
+	{
+		width: auto;
+	}
+
+	.commentaires_menu
+	{
+		width: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	    width: 80%;
+	    height: 100px;
+	    margin: auto;  
+	}
+
+	.commentaires_menu h3
+	{
+		display: none;
+	}
+
+	.commentaires_menu button
+	{
+		font-size: 12px;
+		margin: 10px;
+		width: 100px;
+	}
+
+	.comment_section
+	{
+		margin: 30px auto;
+		width: 1200px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+
+	.comment_notice
+	{
+		display: none;	
+	}
+
+	.login_form
+	{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		margin: auto;
+	}
+
+	.signup_form
+	{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		margin: auto;
+	}
+
+	header
+	{
+		display: flex;
+		flex-direction: row;		
+		background-color: #FFFFFF;
+		margin: auto;
+		width: 100%;
+		height: 70px;
+		top: 0px;	
+		left: 0px;	
+		border-bottom: 1px solid #000000;
+		box-shadow: 0px 1px 6px #000000;
+	}
+
+	#logo
+	{
+		margin: 10px;
+	}
+
+	#menu
+	{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		font-size: 12px;
+		font-family: Roboto, Montserrat, Arial, sans-serif;
+		font-style: bold;
+		font-weight: bold;
+		color: #000000;
+		padding: 25px 0px;
+	}
+
+	nav
+	{
+		display: flex;
+		flex-direction: column;
+		align-content: space-between;
+		color: #000000;
+	}
+
+	.element1, .element3
+	{
+		display: none;
+	}
+
+	.element4
+	{
+		color: #ff7e4a;
+		font-style: normal;
+		font-weight: bold;
+		margin: 20px 10px;
+		padding: 10px 10px;
+		width: 180px;
+		border-radius: 5px;
+		border: 2px solid #ff7e4a; 
+	}
 }

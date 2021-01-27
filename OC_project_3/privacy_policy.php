@@ -6,7 +6,8 @@ session_start();
     include_once 'header.php';
 ?>
 
-    <!-- Contenu de la page -->
+<!-- Contenu de la page -->
+<section class="bloc_page">
    	<section class="main">
         <h1>Mentions légales</h1>
         <h2>Lorem ipsum dolor</h2>
@@ -29,7 +30,8 @@ session_start();
 
         <p><strong>Modifié le : <em>20 Janvier 2021</em></strong></p>
         
-    </section>   
+    </section>
+</section>   
 
 <?php // Footer
 include_once 'footer.php';

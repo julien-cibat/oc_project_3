@@ -16,6 +16,7 @@ if(!$_SESSION['username']) {
 ?>
 
 <!-- Contenu de la page -->
+<section class="bloc_page">
    	<section class="main">
         <!-- Présentation -->
         <h1>Groupement bancaire GBAF</h1>
@@ -76,7 +77,8 @@ if(!$_SESSION['username']) {
             $req->closeCursor();
             ?> 
         </div>        
-    </section>    	 
+    </section>
+</section>    	 
 
 <?php // Footer
 include_once 'footer.php';

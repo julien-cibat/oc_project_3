@@ -4,6 +4,7 @@ session_start();
 include_once 'header.php';
 ?>
 
+<section class="bloc_page">
 	<div class="login_interface">
 		<section class="main">
 			<h1>Connexion</h1>
@@ -30,7 +31,8 @@ include_once 'header.php';
 			<a href="recovery.php">Cliquez sur ce lien pour le réinitialiser</a>
 					
 		</section>
-	</div>	
+	</div>
+</section>	
 
 <?php // Footer
 	include_once 'footer.php';

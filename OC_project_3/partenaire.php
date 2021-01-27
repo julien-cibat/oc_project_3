@@ -16,6 +16,7 @@ if(!$_SESSION['username']) {
 ?>
 
 <!-- Contenu de la page -->
+<section class="bloc_page">
    	<section class="main">
         <!-- Présentation partenaire -->
 
@@ -104,11 +105,11 @@ if(!$_SESSION['username']) {
                 }                
                 ?>                    
             </h3>
-            <button class="CTAsettings"><a href="commentaire.php?page=<?php echo $_GET['page']; ?> ">Commenter</a></button>
-            <button class="CTAsettings"><a href="votes.php?page=<?php echo $_GET['page']; ?>&vote=1 ">Like</a></button>           
-            <button><strong><?php echo $likes_counter; ?></strong></button>
-            <button class="CTAsettings"><a href="votes.php?page=<?php echo $_GET['page']; ?>&vote=-1 ">Dislike</a></button>  
-            <button><strong><?php echo $dislikes_counter; ?></strong></button>
+            <button class="CTA_comment"><a href="commentaire.php?page=<?php echo $_GET['page']; ?> ">Commenter</a></button>
+            <button class="CTA_like"><a href="votes.php?page=<?php echo $_GET['page']; ?>&vote=1 "><img src="img/button_like_mini.png" /></a></button>           
+            <button class="CTA_counter"><strong><?php echo $likes_counter; ?></strong></button>
+            <button class="CTA_dislike"><a href="votes.php?page=<?php echo $_GET['page']; ?>&vote=-1 "><img src="img/button_dislike_mini.png" /></a></button>  
+            <button class="CTA_counter"><strong><?php echo $dislikes_counter; ?></strong></button>
         </div>
         
         <div class="commentaires_list">          
@@ -150,7 +151,8 @@ if(!$_SESSION['username']) {
             $req5->closeCursor();
             ?> 
         </div>        
-    </section>    	 
+    </section>
+</section>    	 
 
 <?php // Footer
 include_once 'footer.php';

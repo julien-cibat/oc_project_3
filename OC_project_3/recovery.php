@@ -2,6 +2,7 @@
 	include_once 'header.php';
 ?>
 
+<section class="bloc_page">
 	<div class="login_signin_interface">
 		<section class="main">
 			<h1>Mot de passe oublié</h1>
@@ -14,7 +15,8 @@
 				</form>
 			</div>		
 		</section>
-	</div>	
+	</div>
+</section>	
 
 <?php
 include_once 'footer.php';

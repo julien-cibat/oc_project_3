@@ -4,6 +4,7 @@ session_start();
 include_once 'header.php';
 ?>
 
+<section class="bloc_page">
 	<div class="login_signup_interface">
 		<section class="main">
 			<h2>Inscription</h2>
@@ -27,6 +28,7 @@ include_once 'header.php';
 			
 		</section>
 	</div>
+</section>
 
 <?php
 include_once 'footer.php';
